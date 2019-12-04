@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "133206167676",
+    "firebase_url": "https://battle-ships-683ab.firebaseio.com",
+    "project_id": "battle-ships-683ab",
+    "storage_bucket": "battle-ships-683ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133206167676:android:563299d537977fdac639f9",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.battleships"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133206167676-2cbaq5d6c4ekrahgdsjcj2jdqh36umvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbb-unDU6bz7dwN_uzo6GBjo07cnSrfAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133206167676-2cbaq5d6c4ekrahgdsjcj2jdqh36umvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
