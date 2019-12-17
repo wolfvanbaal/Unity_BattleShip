@@ -22,7 +22,10 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Gamescene");
+        firstMenuButtons.alpha = firstMenuButtons.alpha == 0 ? 1 : 0;
+        firstMenuButtons.blocksRaycasts = firstMenuButtons.blocksRaycasts == true ? false : true;
+        secondMenuButtons.alpha = secondMenuButtons.alpha == 0 ? 1 : 0;
+        secondMenuButtons.blocksRaycasts = secondMenuButtons.blocksRaycasts == true ? false : true;
     }
 
     public void Settings()
