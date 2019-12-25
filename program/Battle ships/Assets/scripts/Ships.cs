@@ -1,13 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ships
-{
-    public GameObject sprite;
+enum ShipType {AircraftCarrier, BattleShip, Submarine, Cruiser, Destroyer }
 
-    public Ships(GameObject sprite)
+public class Ships : MonoBehaviour, IMoveable
+{
+    [SerializeField]
+    private ShipType shipType;
+
+    [SerializeField]
+    public Sprite sprite;
+    
+    public bool alive = true;
+
+    [SerializeField]
+    public int spacesNedded;
+
+    public Sprite MyIcon
     {
-        this.sprite = sprite;
+        get
+        {
+            return sprite;
+        }
     }
 }

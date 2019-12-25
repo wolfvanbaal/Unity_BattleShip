@@ -9,10 +9,30 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager instance;
+
+    public static GameManager MyInstance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<GameManager>();
+            }
+
+            return instance;
+        }
+    }
+
     [SerializeField]
     GameObject sprite;
 
+    [SerializeField]
+    private List<GameObject> ships;
+
     public DatabaseReference reference;
+
+    public List<GameObject> MyShips { get => ships; set => ships = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -27,17 +47,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-    }
-
-    public void clicked()
-    {
-        Refrence();
-
-        Ships ship = new Ships(sprite);
-        
-        string json = JsonUtility.ToJson(ship);
-
-        reference.Child("test2").SetValueAsync(json);
     }
 
     public void retrive()
