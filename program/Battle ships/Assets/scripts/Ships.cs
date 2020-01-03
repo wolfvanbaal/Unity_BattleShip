@@ -16,7 +16,7 @@ public class Ships : MonoBehaviour, IMoveable
     public bool alive = true;
 
     [SerializeField]
-    public int spacesNedded;
+    private int space;
 
     public Sprite MyIcon
     {
@@ -25,4 +25,8 @@ public class Ships : MonoBehaviour, IMoveable
             return sprite;
         }
     }
+
+    internal ShipType ShipType { get => shipType; }
+
+    public int Space { get => space; set => space = value; }
 }
