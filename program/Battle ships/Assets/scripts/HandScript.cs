@@ -21,39 +21,68 @@ public class HandScript : MonoBehaviour
         }
     }
 
+    private Image icon;
+
+    private Vector3 partRotation;
+
+    private int shipPart;
+
+    private ShipType shipType; 
+
     public IMoveable MyMoveable { get; set; }
 
-    private Image icon;
+    public Image MyIcon { get => icon; set => icon = value; }
+
+    internal ShipType ShipType { get => shipType; set => shipType = value; }
+
+    public int ShipPart { get => shipPart; set => shipPart = value; }
+
+    public Vector3 PartRotation { get => partRotation; set => partRotation = value; }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        icon = GetComponent<Image>();
+        MyIcon = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        icon.transform.position = Input.mousePosition;
+        MyIcon.transform.position = Input.mousePosition;
 
         if (Input.GetMouseButtonDown(1))
         {
-            icon.rectTransform.Rotate(new Vector3(0, 0, 90));
+            MyIcon.rectTransform.Rotate(new Vector3(0, 0, 90));
+            PartRotation += new Vector3(0, 0, 90);
+            if (partRotation.z == 360)
+            {
+                partRotation.z = 0;
+            }
+            Debug.Log(partRotation.z);
         }
     }
 
     public void TakeMoveable(IMoveable moveable)
     {
         this.MyMoveable = moveable;
-        icon.sprite = moveable.MyIcon;
-        icon.enabled = true;
+        MyIcon.sprite = moveable.MyIcon;
+        MyIcon.enabled = true;
     }
 
     public IMoveable Put()
     {
         IMoveable tmp = MyMoveable;
         MyMoveable = null;
-        icon.enabled = false;
+        MyIcon.enabled = false;
         return tmp;
+    }
+
+    public void Drop()
+    {
+        MyMoveable = null;
+        MyIcon.enabled = false;
+        AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
+        AllSlotsScript.MyInstance.FromSlot = null;
     }
 }
