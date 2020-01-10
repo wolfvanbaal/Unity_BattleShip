@@ -18,6 +18,8 @@ public class Ships : MonoBehaviour, IMoveable
     [SerializeField]
     private int space;
 
+    private string player;
+
     public Sprite MyIcon
     {
         get

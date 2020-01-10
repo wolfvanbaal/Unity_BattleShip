@@ -59,7 +59,24 @@ public class HandScript : MonoBehaviour
             {
                 partRotation.z = 0;
             }
-            Debug.Log(partRotation.z);
+            switch (ShipType)
+            {
+                case ShipType.AircraftCarrier:
+                    SlotScript.MyInstance.AC();
+                    break;
+                case ShipType.BattleShip:
+                    SlotScript.MyInstance.BS();
+                    break;
+                case ShipType.Submarine:
+                    SlotScript.MyInstance.Sub();
+                    break;
+                case ShipType.Cruiser:
+                    SlotScript.MyInstance.Cru();
+                    break;
+                case ShipType.Destroyer:
+                    SlotScript.MyInstance.Des();
+                    break;
+            }
         }
     }
 
