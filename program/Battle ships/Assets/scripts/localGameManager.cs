@@ -25,6 +25,9 @@ public class localGameManager : MonoBehaviour
     [SerializeField]
     private Text playerTurnTxt;
 
+    [SerializeField]
+    private GameObject readybtn;
+
     public int PlayerTurn { get => playerTurn; set => playerTurn = value; }
 
     [SerializeField]
@@ -55,18 +58,35 @@ public class localGameManager : MonoBehaviour
     {
         if (PlacedAll())
         {
-            PlayerTurn = 2;
-            playerTurnTxt.text = "PLAYER: 2";
-            MainPlayFieldScript.MyInstance.player2turn = true;
-            foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots1)
+            if (playerTurn == 1)
             {
-                item.GetComponent<MainPlayFieldSlotScript>().MyIcon.enabled = false;
-                item.GetComponent<MainPlayFieldSlotScript>().MyIcon.raycastTarget = false;
+                PlayerTurn = 2;
+                playerTurnTxt.text = "PLAYER: 2";
+                MainPlayFieldScript.MyInstance.player2turn = true;
+                foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots1)
+                {
+                    item.GetComponent<MainPlayFieldSlotScript>().MyIcon.enabled = false;
+                    item.GetComponent<MainPlayFieldSlotScript>().MyIcon.raycastTarget = false;
+                }
+                AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.position = new Vector2(x2, y2);
+                AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.localScale = new Vector3(scalex2, scaley2, 0);
+                AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.position = new Vector2(x1, y1);
+                AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.localScale = new Vector3(scalex1, scaley1, 0);
+                AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().enabled = true;
+                AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots1 = AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots2;
+                AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots2.Clear();
+                foreach (AllSlotsScript item in ContainerScript.MyInstance.MyAllSlotsScripts)
+                {
+                    for (int i = 0; i < item.MySpacesNeeded; i++)
+                    {
+                        item.MyFullship[i].GetComponentInParent<SlotScript>().MyIcon.enabled = true;
+                    }
+                }
             }
-            AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().enabled = true;
-            AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots2 = AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots2;
-            Debug.Log(AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots2.Count);
-            Debug.Log(AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots2[0].GetComponent<MainPlayFieldSlotScript>().MyParent);
+            else if(playerTurn == 2)
+            {
+                readybtn.SetActive(false);
+            }
         }
     }
 

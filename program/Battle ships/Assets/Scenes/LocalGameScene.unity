@@ -8712,6 +8712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTurnTxt: {fileID: 766350142}
+  readybtn: {fileID: 320100313}
   blocks:
   - {fileID: 1281019978}
   - {fileID: 1062894}
