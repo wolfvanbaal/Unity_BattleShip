@@ -41,6 +41,7 @@ public class AllSlotsScript : MonoBehaviour
     }
 
     public GameObject[] MyFullship { get => fullship; set => fullship = value; }
+    public int MySpacesNeeded { get => spacesNeeded; set => spacesNeeded = value; }
 
     // Start is called before the first frame update
     void Start()
