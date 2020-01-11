@@ -569,7 +569,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -577,7 +584,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -585,7 +599,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -593,7 +614,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -604,7 +632,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -612,7 +647,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -620,7 +662,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -628,7 +677,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -639,7 +695,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -647,7 +710,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -655,7 +725,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -663,7 +740,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -674,7 +758,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -682,7 +773,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -690,7 +788,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -698,7 +803,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -712,7 +824,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -720,7 +839,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -728,7 +854,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -736,7 +869,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -747,7 +887,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -755,7 +902,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -763,7 +917,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -771,7 +932,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -782,7 +950,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -790,7 +965,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -798,7 +980,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -806,7 +995,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -817,7 +1013,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -825,7 +1028,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -833,7 +1043,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -841,7 +1058,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[4].GetComponent<Ships>());
@@ -855,7 +1079,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 40];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 40];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 40];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -863,7 +1094,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -871,7 +1109,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -879,7 +1124,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -890,7 +1142,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 4];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 4];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 4];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -898,7 +1157,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -906,7 +1172,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -914,7 +1187,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -925,7 +1205,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 40];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 40];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 40];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -933,7 +1220,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -941,7 +1235,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -949,7 +1250,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -960,7 +1268,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 4];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 4];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 4];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[0].GetComponent<Ships>());
@@ -968,7 +1283,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[1].GetComponent<Ships>());
@@ -976,7 +1298,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[2].GetComponent<Ships>());
@@ -984,7 +1313,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[0].gameObject.tag == "AC")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[0].MyFullship[3].GetComponent<Ships>());
@@ -1002,7 +1338,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1010,7 +1353,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1018,7 +1368,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1029,7 +1386,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1037,7 +1401,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1045,7 +1416,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1056,7 +1434,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1064,7 +1449,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1072,7 +1464,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1083,7 +1482,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1091,7 +1497,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1099,7 +1512,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1113,7 +1533,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1121,7 +1548,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1129,7 +1563,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1140,7 +1581,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1148,7 +1596,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1156,7 +1611,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1167,13 +1629,29 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+
+                }
+                else
+                {
+
+                }
+                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
                     AllSlotsScript.MyInstance.FromSlot = ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponentInParent<SlotScript>();
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
+                }
+                if (activeplayfieldindex == 0)
+                {
+
+                }
+                else
+                {
+
                 }
                 go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
@@ -1182,6 +1660,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot = ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponentInParent<SlotScript>();
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
+                }
+                if (activeplayfieldindex == 0)
+                {
+
+                }
+                else
+                {
+
                 }
                 go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
@@ -1194,13 +1680,29 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+
+                }
+                else
+                {
+
+                }
+                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
                     AllSlotsScript.MyInstance.FromSlot = ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponentInParent<SlotScript>();
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
+                }
+                if (activeplayfieldindex == 0)
+                {
+
+                }
+                else
+                {
+
                 }
                 go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
@@ -1209,6 +1711,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot = ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponentInParent<SlotScript>();
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
+                }
+                if (activeplayfieldindex == 0)
+                {
+
+                }
+                else
+                {
+
                 }
                 go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
@@ -1224,7 +1734,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1232,7 +1749,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1240,7 +1764,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1251,7 +1782,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1259,7 +1797,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1267,7 +1812,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1278,7 +1830,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1286,7 +1845,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1294,7 +1860,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1305,7 +1878,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1313,7 +1893,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1321,7 +1908,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[3].GetComponent<Ships>());
@@ -1335,7 +1929,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1343,7 +1944,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1351,7 +1959,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1362,7 +1977,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1370,7 +1992,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1378,7 +2007,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1389,7 +2025,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 30];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 30];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1397,7 +2040,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1405,7 +2055,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1416,7 +2073,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 3];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 3];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[0].GetComponent<Ships>());
@@ -1424,7 +2088,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[1].GetComponent<Ships>());
@@ -1432,7 +2103,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[1].gameObject.tag == "BS")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[1].MyFullship[2].GetComponent<Ships>());
@@ -1450,7 +2128,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1458,7 +2143,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1469,7 +2161,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1477,7 +2176,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1488,7 +2194,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1496,7 +2209,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1507,7 +2227,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1515,7 +2242,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1529,7 +2263,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1537,7 +2278,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1548,7 +2296,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1556,7 +2311,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1567,7 +2329,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1575,7 +2344,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1586,7 +2362,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1594,7 +2377,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[2].GetComponent<Ships>());
@@ -1608,7 +2398,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1616,7 +2413,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1627,7 +2431,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1635,7 +2446,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1646,7 +2464,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1654,7 +2479,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1665,7 +2497,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[0].GetComponent<Ships>());
@@ -1673,7 +2512,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[2].gameObject.tag == "Sub")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[2].MyFullship[1].GetComponent<Ships>());
@@ -1691,7 +2537,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1699,7 +2552,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1710,7 +2570,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1718,7 +2585,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1729,7 +2603,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1737,7 +2618,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1748,7 +2636,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1756,7 +2651,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1770,7 +2672,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1778,7 +2687,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1789,7 +2705,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1797,7 +2720,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1808,7 +2738,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1816,7 +2753,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1827,7 +2771,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1835,7 +2786,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[2].GetComponent<Ships>());
@@ -1849,7 +2807,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1857,7 +2822,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1868,7 +2840,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1876,7 +2855,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1887,7 +2873,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 20];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 20];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1895,7 +2888,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1906,7 +2906,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 2];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 2];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[0].GetComponent<Ships>());
@@ -1914,7 +2921,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
                     AllSlotsScript.MyInstance.FromSlot.MyIcon.enabled = false;
                     AllSlotsScript.MyInstance.FromSlot = null;
                 }
-                go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[3].gameObject.tag == "Cru")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[3].MyFullship[1].GetComponent<Ships>());
@@ -1932,7 +2946,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[1].GetComponent<Ships>());
@@ -1943,7 +2964,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[1].GetComponent<Ships>());
@@ -1954,7 +2982,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[1].GetComponent<Ships>());
@@ -1965,7 +3000,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             else if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[1].GetComponent<Ships>());
@@ -1979,7 +3021,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
         {
             if (HandScript.MyInstance.PartRotation.z == 0)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[0].GetComponent<Ships>());
@@ -1990,7 +3039,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 90)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index - 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index - 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[0].GetComponent<Ships>());
@@ -2001,7 +3057,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 180)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 10];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 10];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[0].GetComponent<Ships>());
@@ -2012,7 +3075,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
             if (HandScript.MyInstance.PartRotation.z == 270)
             {
-                GameObject go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots1[index + 1];
+                if (activeplayfieldindex == 0)
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
+                else
+                {
+                    go = AllPlayFieldsScript.MyInstance.MyPlayfield[activeplayfieldindex].GetComponent<MainPlayFieldScript>().Playslots2[index + 1];
+                }
                 if (ContainerScript.MyInstance.MyAllSlotsScripts[4].gameObject.tag == "Des")
                 {
                     go.GetComponent<MainPlayFieldSlotScript>().PutOnBoard(ContainerScript.MyInstance.MyAllSlotsScripts[4].MyFullship[0].GetComponent<Ships>());
