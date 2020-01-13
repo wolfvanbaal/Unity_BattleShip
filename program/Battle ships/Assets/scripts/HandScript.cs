@@ -59,7 +59,48 @@ public class HandScript : MonoBehaviour
             {
                 partRotation.z = 0;
             }
-            Debug.Log(partRotation.z);
+            if (localGameManager.MyInstance.PlayerTurn == 1)
+            {
+                switch (ShipType)
+                {
+                    case ShipType.AircraftCarrier:
+                        SlotScript.MyInstance.AC1();
+                        break;
+                    case ShipType.BattleShip:
+                        SlotScript.MyInstance.BS1();
+                        break;
+                    case ShipType.Submarine:
+                        SlotScript.MyInstance.Sub1();
+                        break;
+                    case ShipType.Cruiser:
+                        SlotScript.MyInstance.Cru1();
+                        break;
+                    case ShipType.Destroyer:
+                        SlotScript.MyInstance.Des1();
+                        break;
+                }
+            }
+            else
+            {
+                switch (ShipType)
+                {
+                    case ShipType.AircraftCarrier:
+                        SlotScript.MyInstance.AC2();
+                        break;
+                    case ShipType.BattleShip:
+                        SlotScript.MyInstance.BS2();
+                        break;
+                    case ShipType.Submarine:
+                        SlotScript.MyInstance.Sub2();
+                        break;
+                    case ShipType.Cruiser:
+                        SlotScript.MyInstance.Cru2();
+                        break;
+                    case ShipType.Destroyer:
+                        SlotScript.MyInstance.Des2();
+                        break;
+                }
+            }
         }
     }
 
