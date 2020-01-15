@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
+public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInteractable
 {
     private static MainPlayFieldSlotScript instance;
 
@@ -27,6 +27,9 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
 
     [SerializeField]
     private Image icon;
+
+    [SerializeField]
+    private Sprite hitVisual,missVisual;
 
     [SerializeField]
     private GameObject parent;
@@ -3791,5 +3794,33 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler
             }
         }
         return true;
+    }
+
+    public void Interact()
+    {
+        MyIcon.enabled = true;
+        if (MyIcon.sprite != null)
+        {
+            MyIcon.sprite = hitVisual;
+            if (localGameManager.MyInstance.PlayerTurn == 1)
+            {
+                localGameManager.MyInstance.Player1Hits++;
+            }
+            else if (localGameManager.MyInstance.PlayerTurn == 2)
+            {
+                localGameManager.MyInstance.Player2Hits++;
+            }
+        }
+        else
+        {
+            MyIcon.color = Color.white;
+            MyIcon.sprite = missVisual;
+        }
+        GetComponent<BoxCollider2D>().enabled = false;
+    }
+
+    public void StopInteract()
+    {
+
     }
 }

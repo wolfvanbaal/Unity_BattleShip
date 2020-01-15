@@ -25,6 +25,9 @@ public class HandScript : MonoBehaviour
 
     private Vector3 partRotation;
 
+    [SerializeField]
+    private Vector3 offset;
+
     private int shipPart;
 
     private ShipType shipType; 
@@ -49,7 +52,7 @@ public class HandScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MyIcon.transform.position = Input.mousePosition;
+        icon.transform.position = Input.mousePosition + offset;
 
         if (Input.GetMouseButtonDown(1))
         {
