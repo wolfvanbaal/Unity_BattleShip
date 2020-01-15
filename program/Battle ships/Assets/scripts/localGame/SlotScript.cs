@@ -40,6 +40,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
     public Image MyIcon { get => icon; }
     public Sprite SpriteName { get => spriteName; set => spriteName = value; }
 
+    //this executes when you want to pick up a ship to place it on the main grid
     public void OnPointerClick(PointerEventData eventData)
     {
         if (MyIcon.raycastTarget == true)
@@ -103,6 +104,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    //these lines of code check if you can place your ship on the places that they want to be assigned to
     #region shipscheck
     public void AC1()
     {

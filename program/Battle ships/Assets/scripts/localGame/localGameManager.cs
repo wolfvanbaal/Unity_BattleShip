@@ -62,6 +62,7 @@ public class localGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //setting the main camara and getting the bounds as 
         mainCamera = Camera.main;
         x1 = blocks[0].position.x;
         y1 = blocks[0].position.y;
@@ -82,6 +83,7 @@ public class localGameManager : MonoBehaviour
         }
     }
 
+    //
     public void Ready()
     {
         if (PlacedAll())
@@ -134,6 +136,7 @@ public class localGameManager : MonoBehaviour
         }
     }
 
+    //
     private bool PlacedAll()
     {
         foreach (AllSlotsScript item in ContainerScript.MyInstance.MyAllSlotsScripts)
@@ -149,7 +152,7 @@ public class localGameManager : MonoBehaviour
         return true;
     }
 
-
+    //
     private void ClickTarget()
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !turnTaken)
@@ -169,14 +172,14 @@ public class localGameManager : MonoBehaviour
             }
         }
     }
-
+    
     private IEnumerator WinPlayer1()
     {
         player1WinBanner.enabled = true;
         yield return new WaitForSeconds(3);
         EndScreenManager.MyInstance.endScreenStatsShow();
     }
-
+    
     private IEnumerator WinPlayer2()
     {
         player2WinBanner.enabled = true;
@@ -184,6 +187,7 @@ public class localGameManager : MonoBehaviour
         EndScreenManager.MyInstance.endScreenStatsShow();
     }
 
+    //this determents the time it takes between turns
     private IEnumerator TimeBetweenPlayers()
     {
         yield return new WaitForSeconds(1);

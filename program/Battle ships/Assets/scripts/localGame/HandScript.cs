@@ -52,8 +52,10 @@ public class HandScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //this lets the hand object follow thw mouse
         icon.transform.position = Input.mousePosition + offset;
 
+        //this part lets the part be rotated and blocks your placements acording to the rotation
         if (Input.GetMouseButtonDown(1))
         {
             MyIcon.rectTransform.Rotate(new Vector3(0, 0, 90));
@@ -107,6 +109,7 @@ public class HandScript : MonoBehaviour
         }
     }
 
+    //this lets you pick up a ship part to move it around
     public void TakeMoveable(IMoveable moveable)
     {
         this.MyMoveable = moveable;
@@ -114,6 +117,7 @@ public class HandScript : MonoBehaviour
         MyIcon.enabled = true;
     }
 
+    //this lets you place dount a ship part on the grid
     public IMoveable Put()
     {
         IMoveable tmp = MyMoveable;
@@ -121,7 +125,8 @@ public class HandScript : MonoBehaviour
         MyIcon.enabled = false;
         return tmp;
     }
-
+    
+    //this lets you drop a ship part to be able to pickup a new one
     public void Drop()
     {
         MyMoveable = null;

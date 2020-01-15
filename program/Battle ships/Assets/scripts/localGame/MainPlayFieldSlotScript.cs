@@ -42,6 +42,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
 
     private int index;
 
+    //this actualy places the parts on the board
     public void PutOnBoard(Ships ship)
     {
         MyIcon.enabled = true;
@@ -55,6 +56,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
         }
     }
 
+    //these lines of code know whitch part you place and with witch rotation and place the other parts acording to that
     #region ships
     private void AC()
     {
@@ -3098,6 +3100,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
     }
     #endregion
 
+    //this part executes whet you click on a grid slot to see if you can place it there and than place the whole ship
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -3151,6 +3154,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
         }
     }
 
+    //this part checks if the ships are not overlaping
     private bool CanPlace(int spaces)
     {
         if (HandScript.MyInstance.ShipPart == 1)
@@ -3796,6 +3800,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
         return true;
     }
 
+    //this part lets you shoot at the other players ships when you are play the game
     public void Interact()
     {
         MyIcon.enabled = true;
@@ -3825,10 +3830,5 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
             }
         }
         GetComponent<BoxCollider2D>().enabled = false;
-    }
-
-    public void StopInteract()
-    {
-
     }
 }
