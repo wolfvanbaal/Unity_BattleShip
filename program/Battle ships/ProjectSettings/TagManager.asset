@@ -9,6 +9,7 @@ TagManager:
   - Sub
   - Cru
   - Des
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Clickable
+  - banners
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: banners
+    uniqueID: 300220925
     locked: 0
