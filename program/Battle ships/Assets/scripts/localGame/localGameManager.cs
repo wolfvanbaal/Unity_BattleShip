@@ -122,6 +122,14 @@ public class localGameManager : MonoBehaviour
                 {
                     item.GetComponent<MainPlayFieldSlotScript>().MyIcon.enabled = false;
                 }
+                foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots1)
+                {
+                    item.GetComponent<BoxCollider2D>().enabled = false;
+                }
+                foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots2)
+                {
+                    item.GetComponent<BoxCollider2D>().enabled = true;
+                }
             }
         }
     }
@@ -189,6 +197,14 @@ public class localGameManager : MonoBehaviour
             AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.localScale = new Vector3(scalex2, scaley2, 0);
             AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.position = new Vector2(x1, y1);
             AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.localScale = new Vector3(scalex1, scaley1, 0);
+            foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots2)
+            {
+                item.GetComponent<BoxCollider2D>().enabled = false;
+            }
+            foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots1)
+            {
+                item.GetComponent<BoxCollider2D>().enabled = true;
+            }
             if (Player1Hits == 17)
             {
                 StartCoroutine(WinPlayer1());
@@ -204,6 +220,14 @@ public class localGameManager : MonoBehaviour
             AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.localScale = new Vector3(scalex2, scaley2, 0);
             AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.position = new Vector2(x1, y1);
             AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.localScale = new Vector3(scalex1, scaley1, 0);
+            foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots1)
+            {
+                item.GetComponent<BoxCollider2D>().enabled = false;
+            }
+            foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots2)
+            {
+                item.GetComponent<BoxCollider2D>().enabled = true;
+            }
             if (Player2Hits == 17)
             {
                 StartCoroutine(WinPlayer2());
