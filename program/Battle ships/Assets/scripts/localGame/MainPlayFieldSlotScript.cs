@@ -3815,6 +3815,14 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
         {
             MyIcon.color = Color.white;
             MyIcon.sprite = missVisual;
+            if (localGameManager.MyInstance.PlayerTurn == 1)
+            {
+                localGameManager.MyInstance.MissesPlayer1++;
+            }
+            else if (localGameManager.MyInstance.PlayerTurn == 2)
+            {
+                localGameManager.MyInstance.MissesPlayer2++;
+            }
         }
         GetComponent<BoxCollider2D>().enabled = false;
     }

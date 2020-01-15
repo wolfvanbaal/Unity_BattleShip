@@ -23,9 +23,14 @@ public class localGameManager : MonoBehaviour
 
     private int playerTurn = 1;
 
-    private int player1Hits, player2Hits;
+    private int player1Hits, player2Hits, missesPlayer1, missesPlayer2, turnsPlayer1, turnsPlayer2;
+
+    [SerializeField]
+    private Image player1WinBanner, player2WinBanner;
 
     private bool startGame = false;
+
+    private bool turnTaken;
 
     private Camera mainCamera;
 
@@ -40,6 +45,14 @@ public class localGameManager : MonoBehaviour
     public int Player1Hits { get => player1Hits; set => player1Hits = value; }
 
     public int Player2Hits { get => player2Hits; set => player2Hits = value; }
+
+    public int MissesPlayer1 { get => missesPlayer1; set => missesPlayer1 = value; }
+
+    public int MissesPlayer2 { get => missesPlayer2; set => missesPlayer2 = value; }
+
+    public int TurnsPlayer1 { get => turnsPlayer1; set => turnsPlayer1 = value; }
+
+    public int TurnsPlayer2 { get => turnsPlayer2; set => turnsPlayer2 = value; }
 
     [SerializeField]
     private Transform[] blocks;
@@ -131,7 +144,7 @@ public class localGameManager : MonoBehaviour
 
     private void ClickTarget()
     {
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !turnTaken)
         {
             //Makes a raycast from the mouse position into the game world
             RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, Vector2.zero, Mathf.Infinity);
@@ -141,35 +154,9 @@ public class localGameManager : MonoBehaviour
                 IInteractable entity = hit.collider.gameObject.GetComponent<IInteractable>();
                 if (hit.collider != null && hit.collider.tag == "Interactable")
                 {
+                    turnTaken = true;
                     entity.Interact();
-                }
-            }
-            if (playerTurn == 1)
-            {
-                playerTurn = 2;
-                playerTurnTxt.text = "PLAYER: 2";
-
-                AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.position = new Vector2(x2, y2);
-                AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.localScale = new Vector3(scalex2, scaley2, 0);
-                AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.position = new Vector2(x1, y1);
-                AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.localScale = new Vector3(scalex1, scaley1, 0);
-                if (Player1Hits == 17)
-                {
-                    StartCoroutine(WinPlayer1());
-                }
-            }
-            else if (playerTurn == 2)
-            {
-                playerTurn = 1;
-                playerTurnTxt.text = "PLAYER: 1";
-
-                AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.position = new Vector2(x2, y2);
-                AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.localScale = new Vector3(scalex2, scaley2, 0);
-                AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.position = new Vector2(x1, y1);
-                AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.localScale = new Vector3(scalex1, scaley1, 0);
-                if (Player2Hits == 17)
-                {
-
+                    StartCoroutine(TimeBetweenPlayers());
                 }
             }
         }
@@ -177,7 +164,51 @@ public class localGameManager : MonoBehaviour
 
     private IEnumerator WinPlayer1()
     {
-
+        player1WinBanner.enabled = true;
         yield return new WaitForSeconds(3);
+        EndScreenManager.MyInstance.endScreenStatsShow();
+    }
+
+    private IEnumerator WinPlayer2()
+    {
+        player2WinBanner.enabled = true;
+        yield return new WaitForSeconds(3);
+        EndScreenManager.MyInstance.endScreenStatsShow();
+    }
+
+    private IEnumerator TimeBetweenPlayers()
+    {
+        yield return new WaitForSeconds(1);
+        if (playerTurn == 1)
+        {
+            playerTurn = 2;
+            playerTurnTxt.text = "PLAYER: 2";
+            TurnsPlayer1++;
+
+            AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.position = new Vector2(x2, y2);
+            AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.localScale = new Vector3(scalex2, scaley2, 0);
+            AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.position = new Vector2(x1, y1);
+            AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.localScale = new Vector3(scalex1, scaley1, 0);
+            if (Player1Hits == 17)
+            {
+                StartCoroutine(WinPlayer1());
+            }
+        }
+        else if (playerTurn == 2)
+        {
+            playerTurn = 1;
+            playerTurnTxt.text = "PLAYER: 1";
+            TurnsPlayer2++;
+
+            AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.position = new Vector2(x2, y2);
+            AllPlayFieldsScript.MyInstance.MyPlayfield[0].transform.localScale = new Vector3(scalex2, scaley2, 0);
+            AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.position = new Vector2(x1, y1);
+            AllPlayFieldsScript.MyInstance.MyPlayfield[1].transform.localScale = new Vector3(scalex1, scaley1, 0);
+            if (Player2Hits == 17)
+            {
+                StartCoroutine(WinPlayer2());
+            }
+        }
+        turnTaken = false;
     }
 }

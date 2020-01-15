@@ -62,22 +62,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\scripts\AllPlayFieldsScript.cs" />
-    <Compile Include="Assets\scripts\AllSlotsScript.cs" />
-    <Compile Include="Assets\scripts\ContainerScript.cs" />
-    <Compile Include="Assets\scripts\GameManager.cs" />
-    <Compile Include="Assets\scripts\HandScript.cs" />
-    <Compile Include="Assets\scripts\IClickable.cs" />
-    <Compile Include="Assets\scripts\IInteractable.cs" />
-    <Compile Include="Assets\scripts\IMoveable.cs" />
-    <Compile Include="Assets\scripts\localGameManager.cs" />
-    <Compile Include="Assets\scripts\MainPlayFieldScript.cs" />
-    <Compile Include="Assets\scripts\MainPlayFieldSlotScript.cs" />
-    <Compile Include="Assets\scripts\MenuManager.cs" />
-    <Compile Include="Assets\scripts\ObservableStack.cs" />
-    <Compile Include="Assets\scripts\PlayFieldSlotComparerscript.cs" />
-    <Compile Include="Assets\scripts\Ships.cs" />
-    <Compile Include="Assets\scripts\SlotScript.cs" />
+    <Compile Include="Assets\scripts\interfaces\IClickable.cs" />
+    <Compile Include="Assets\scripts\interfaces\IInteractable.cs" />
+    <Compile Include="Assets\scripts\interfaces\IMoveable.cs" />
+    <Compile Include="Assets\scripts\localGame\AllPlayFieldsScript.cs" />
+    <Compile Include="Assets\scripts\localGame\AllSlotsScript.cs" />
+    <Compile Include="Assets\scripts\localGame\ContainerScript.cs" />
+    <Compile Include="Assets\scripts\localGame\GameManager.cs" />
+    <Compile Include="Assets\scripts\localGame\HandScript.cs" />
+    <Compile Include="Assets\scripts\localGame\localGameManager.cs" />
+    <Compile Include="Assets\scripts\localGame\MainPlayFieldScript.cs" />
+    <Compile Include="Assets\scripts\localGame\MainPlayFieldSlotScript.cs" />
+    <Compile Include="Assets\scripts\localGame\ObservableStack.cs" />
+    <Compile Include="Assets\scripts\localGame\PlayFieldSlotComparerscript.cs" />
+    <Compile Include="Assets\scripts\localGame\Ships.cs" />
+    <Compile Include="Assets\scripts\localGame\SlotScript.cs" />
+    <Compile Include="Assets\scripts\Menu\EndScreenManager.cs" />
+    <Compile Include="Assets\scripts\Menu\MenuManager.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
