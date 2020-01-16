@@ -207,7 +207,10 @@ public class localGameManager : MonoBehaviour
             }
             foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[0].GetComponent<MainPlayFieldScript>().Playslots1)
             {
-                item.GetComponent<BoxCollider2D>().enabled = true;
+                if (item.GetComponentInChildren<MainPlayFieldSlotScript>().MyIcon.enabled != true)
+                {
+                    item.GetComponent<BoxCollider2D>().enabled = true;
+                }
             }
             if (Player1Hits == 17)
             {
@@ -230,7 +233,10 @@ public class localGameManager : MonoBehaviour
             }
             foreach (GameObject item in AllPlayFieldsScript.MyInstance.MyPlayfield[1].GetComponent<MainPlayFieldScript>().Playslots2)
             {
-                item.GetComponent<BoxCollider2D>().enabled = true;
+                if (item.GetComponentInChildren<MainPlayFieldSlotScript>().MyIcon.enabled != true)
+                {
+                    item.GetComponent<BoxCollider2D>().enabled = true;
+                }
             }
             if (Player2Hits == 17)
             {

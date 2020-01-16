@@ -3803,8 +3803,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
     //this part lets you shoot at the other players ships when you are play the game
     public void Interact()
     {
-        MyIcon.enabled = true;
-        if (MyIcon.sprite != null)
+        if (MyIcon.sprite != null && MyIcon.enabled != true)
         {
             MyIcon.sprite = hitVisual;
             if (localGameManager.MyInstance.PlayerTurn == 1)
@@ -3816,7 +3815,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
                 localGameManager.MyInstance.Player2Hits++;
             }
         }
-        else
+        else if (MyIcon.sprite == null && MyIcon.enabled != true)
         {
             MyIcon.color = Color.white;
             MyIcon.sprite = missVisual;
@@ -3829,6 +3828,7 @@ public class MainPlayFieldSlotScript : MonoBehaviour, IPointerClickHandler, IInt
                 localGameManager.MyInstance.MissesPlayer2++;
             }
         }
+        MyIcon.enabled = true;
         GetComponent<BoxCollider2D>().enabled = false;
     }
 }
